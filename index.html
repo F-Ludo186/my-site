@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokémon</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <aside id="liste">
+        <h2>Quelques Pokemons sur les 1351</h2>
+        <ul id="listePokemon"></ul>
+    </aside>
+
+    <main>
+      <header>
+        <h2>Cherche un Pokémon</h2>
+
+        <form id="search-form">
+            <input type="text" id="search" placeholder="pikachu" list="suggestions" autocomplete="off">
+            <datalist id="suggestions"></datalist>  
+            <button type="submit">Chercher</button>
+        </form>
+    </header>
+
+    <div id="error"></div>
+
+    <div id="loader" hidden></div>
+
+    <div class="cards-container">
+        <div id="cardInfo" class="pokemon-card">
+            <p id="nomPokemon"></p>  
+            <p id="HauteurPokemon"></p>  
+            <p id="PoidsPokemon"></p>  
+            <p id="ExperiencePokemon"></p>  
+            
+            <div class="info-section">
+                <h3>Capacités</h3>
+                <div id="abilities" class="badges-container"></div>
+            </div>
+
+            <div class="info-section">
+                <h3>Types</h3>
+                <div id="types" class="badges-container"></div>
+            </div>
+            
+            <div class="info-section">
+                <h3>Statistiques</h3>
+                <div id="stats"></div>
+            </div>
+        </div>
+
+        <div id="cardPokemon" class="pokemon-card">
+            <div class="pokemon-images">
+                <div id="imgPokemon" class="pokemon-image">
+                    <label for="imgPokemon">Normal</label>
+                    <img src="" alt="Image du Pokémon">
+                </div>
+
+                <div id="imgPokemonfemal" class="pokemon-image">
+                    <label for="imgPokemonfemal">Femelle</label>
+                    <img  src="" alt="Image du Pokémon femelle">
+                </div>
+
+                <div id="imgPokemonShiny" class="pokemon-image">
+                    <label for="imgPokemonShiny">Shiny</label>
+                    <img  src="" alt="Image du Pokémon shiny">
+                </div>
+
+                <div id="imgPokemonShinyFemal" class="pokemon-image">
+                    <label for="imgPokemonShinyFemal">Shiny femelle</label>
+                    <img  src="" alt="Image du Pokémon shiny femelle">
+                </div>
+            </div>
+
+            <label for="audio1">son d'origine</label>
+            <audio controls id="audio1" >
+                <source id="source" src="" type="audio/ogg">
+                Votre navigateur ne supporte pas la lecture audio.
+            </audio>
+            
+            <label for="audio2">Dernier son</label>
+            <audio controls id="audio2" >
+                <source id="source2" src="" type="audio/ogg">
+                Votre navigateur ne supporte pas la lecture audio.
+            </audio>
+        </div>
+      </div>  
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
